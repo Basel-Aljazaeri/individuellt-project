@@ -79,4 +79,22 @@ def beginEndBlocks():
     for i in range(len(list_)):
         if list_[i] != list_to_be[i]:
             return False
-
+        
+def check_tests():
+    '''testing all functions'''
+    if gitSupport() == False:
+        return False
+    if tabComment() is not None:
+        return False
+    if blankLines() is not None:
+        return False
+    if beginBlocks() is not None:
+        return False
+    if endBlocks() is not None:
+        return False
+    if beginEndBlocks() == False:
+        return False
+    print("All tests passed")
+    return True
+    
+check_tests()
